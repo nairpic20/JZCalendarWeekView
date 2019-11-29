@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 /// cannot change for now, will implement theme in the future
 class JZWeekViewColors {
 
@@ -17,8 +18,11 @@ class JZWeekViewColors {
     class var rowHeaderTime: UIColor { return UIColor(hex: 0x999999) }
     class var gridLine: UIColor { return UIColor.lightGray }
 
-    class var today: UIColor { return UIColor(hex: 0x0089FF) }
+    //class var today: UIColor { return UIColor(hex: 0x0089FF) }
+    //TODO: if colors needs to reflect DarkMode, add theme management
+    class var today: UIColor { return UIColor(hex: 0xffa400) }
     class var appleCalendarRed: UIColor { return UIColor(hex: 0xFC3D39) }
+  
 }
 
 extension UIColor {
