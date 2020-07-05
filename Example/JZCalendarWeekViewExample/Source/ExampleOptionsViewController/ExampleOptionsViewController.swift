@@ -28,7 +28,7 @@ class ExampleOptionsViewController: UIViewController {
 
     func setupBasic() {
         self.automaticallyAdjustsScrollViewInsets = false
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.red
         navigationItem.title = "Options"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(onBtnDoneTapped))
     }

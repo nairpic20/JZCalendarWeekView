@@ -12,16 +12,53 @@ import Foundation
 /// cannot change for now, will implement theme in the future
 class JZWeekViewColors {
 
-    class var columnHeaderWeekday: UIColor { return UIColor(hex: 0x757575) }
-    class var columnHeaderDay: UIColor { return UIColor(hex: 0x757575) }
-    class var allDayHeader: UIColor { return UIColor(hex: 0x757575) }
-    class var rowHeaderTime: UIColor { return UIColor(hex: 0x999999) }
-    class var gridLine: UIColor { return UIColor.lightGray }
-
-    //class var today: UIColor { return UIColor(hex: 0x0089FF) }
-    //TODO: if colors needs to reflect DarkMode, add theme management
+    //make the green
     class var today: UIColor { return UIColor(hex: 0xffa400) }
-    class var appleCalendarRed: UIColor { return UIColor(hex: 0xFC3D39) }
+    
+    
+    class var secondaryLabel: UIColor {
+        if #available(iOS 13, *) {
+            return UIColor.secondaryLabel
+        } else {
+            return UIColor(hex: 0x757575)
+        }
+    }
+    class var tertiaryLabel: UIColor {
+        if #available(iOS 13, *) {
+            return UIColor.tertiaryLabel
+        } else {
+            return UIColor(hex: 0x999999)
+        }
+    }
+    class var separator: UIColor {
+        if #available(iOS 13, *) {
+            return UIColor.separator
+        } else {
+            return UIColor.lightGray
+        }
+    }
+    class var background: UIColor {
+        if #available(iOS 13, *) {
+            return UIColor.systemBackground
+        } else {
+            return UIColor.white
+        }
+    }
+    
+    class var yellowIsh: UIColor {
+        if #available(iOS 13, *) {
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                return UIColor(hex: 0xffa400)//return UIColor(hex: 0x00FF00)
+            } else {
+                return UIColor(hex: 0xffa400)
+            }
+        } else {
+            return UIColor(hex: 0xffa400)
+        }
+    }
+    
+    class var blue: UIColor { return UIColor.systemBlue }
+    class var red: UIColor { return UIColor.systemRed }
   
 }
 
